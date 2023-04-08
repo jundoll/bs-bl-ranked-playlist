@@ -29,14 +29,14 @@ async def main():
 
             # increment
             page += 1
-            print(f'star={star:02}, page={page:03}')
+            print(f'star={star:02}, page={page:03}, total')
 
             # get ranked maplist
             leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, count=count, type='ranked', stars_from=star-1, stars_to=star+1)
 
             # set songs
             if leaderboardInfoResponseResponseWithMetadata is not None:
-                if leaderboardInfoResponseResponseWithMetadata.data is not None and len(leaderboardInfoResponseResponseWithMetadata.data) > 0:
+                if (leaderboardInfoResponseResponseWithMetadata.data is not None) and (len(leaderboardInfoResponseResponseWithMetadata.data) > 0):
                     for leaderboardInfoResponse in leaderboardInfoResponseResponseWithMetadata.data:
                         if (leaderboardInfoResponse.song is not None) and (leaderboardInfoResponse.difficulty is not None):
                             if int(leaderboardInfoResponse.difficulty.stars) == star:
@@ -95,14 +95,14 @@ async def main():
 
             # increment
             page += 1
-            print(f'star={star:02}, page={page:03}')
+            print(f'star={star:02}, page={page:03}, pass')
 
             # get ranked maplist
             leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, count=count, type='ranked', passrating_from=star-1, passrating_to=star+1)
 
             # set songs
             if leaderboardInfoResponseResponseWithMetadata is not None:
-                if leaderboardInfoResponseResponseWithMetadata.data is not None and len(leaderboardInfoResponseResponseWithMetadata.data) > 0:
+                if (leaderboardInfoResponseResponseWithMetadata.data is not None) and (len(leaderboardInfoResponseResponseWithMetadata.data) > 0):
                     for leaderboardInfoResponse in leaderboardInfoResponseResponseWithMetadata.data:
                         if (leaderboardInfoResponse.song is not None) and (leaderboardInfoResponse.difficulty is not None):
                             if int(leaderboardInfoResponse.difficulty.passRating) == star:
@@ -161,14 +161,14 @@ async def main():
 
             # increment
             page += 1
-            print(f'star={star:02}, page={page:03}')
+            print(f'star={star:02}, page={page:03}, acc')
 
             # get ranked maplist
             leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, count=count, type='ranked', accrating_from=star-1, accrating_to=star+1)
 
             # set songs
             if leaderboardInfoResponseResponseWithMetadata is not None:
-                if leaderboardInfoResponseResponseWithMetadata.data is not None and len(leaderboardInfoResponseResponseWithMetadata.data) > 0:
+                if (leaderboardInfoResponseResponseWithMetadata.data is not None) and (len(leaderboardInfoResponseResponseWithMetadata.data) > 0):
                     for leaderboardInfoResponse in leaderboardInfoResponseResponseWithMetadata.data:
                         if (leaderboardInfoResponse.song is not None) and (leaderboardInfoResponse.difficulty is not None):
                             if int(leaderboardInfoResponse.difficulty.accRating) == star:
@@ -227,14 +227,14 @@ async def main():
 
             # increment
             page += 1
-            print(f'star={star:02}, page={page:03}')
+            print(f'star={star:02}, page={page:03}, tech')
 
             # get ranked maplist
             leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, count=count, type='ranked', techrating_from=star-1, techrating_to=star+1)
 
             # set songs
             if leaderboardInfoResponseResponseWithMetadata is not None:
-                if leaderboardInfoResponseResponseWithMetadata.data is not None and len(leaderboardInfoResponseResponseWithMetadata.data) > 0:
+                if (leaderboardInfoResponseResponseWithMetadata.data is not None) and (len(leaderboardInfoResponseResponseWithMetadata.data) > 0):
                     for leaderboardInfoResponse in leaderboardInfoResponseResponseWithMetadata.data:
                         if (leaderboardInfoResponse.song is not None) and (leaderboardInfoResponse.difficulty is not None):
                             if int(leaderboardInfoResponse.difficulty.techRating) == star:
