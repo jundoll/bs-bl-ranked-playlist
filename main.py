@@ -95,7 +95,7 @@ async def main():
             print(f'star={star:02}, page={page:03}')
 
             # get ranked maplist
-            leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, type='ranked', stars_from=star-1, stars_to=star+1)
+            leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, type='ranked', passrating_from=star-1, passrating_to=star+1)
 
             # set songs
             if leaderboardInfoResponseResponseWithMetadata is not None:
@@ -161,7 +161,7 @@ async def main():
             print(f'star={star:02}, page={page:03}')
 
             # get ranked maplist
-            leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, type='ranked', stars_from=star-1, stars_to=star+1)
+            leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, type='ranked', accrating_from=star-1, accrating_to=star+1)
 
             # set songs
             if leaderboardInfoResponseResponseWithMetadata is not None:
@@ -227,7 +227,7 @@ async def main():
             print(f'star={star:02}, page={page:03}')
 
             # get ranked maplist
-            leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, type='ranked', stars_from=star-1, stars_to=star+1)
+            leaderboardInfoResponseResponseWithMetadata = await beatleader.get_leaderboards(page=page, type='ranked', techrating_from=star-1, techrating_to=star+1)
 
             # set songs
             if leaderboardInfoResponseResponseWithMetadata is not None:
