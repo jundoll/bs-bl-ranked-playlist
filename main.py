@@ -133,9 +133,9 @@ async def main():
 
         # read image
         with open(f'imgs/p{star:02}.txt', 'r') as f:
-            #  img = f.read()
+            img = f.read()
 
-            # gen playlist
+        # gen playlist
         fname = f'bl_ranked_pass_rate_{star:02}.bplist'
         playlist = {
             "customData": {
