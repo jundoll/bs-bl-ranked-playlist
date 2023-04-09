@@ -285,4 +285,6 @@ async def main():
 
 
 if __name__ == '__main__':
+    a = asyncio.run(beatleader.get_player(76561198993503681))
+    print(a)
     asyncio.run(main())
