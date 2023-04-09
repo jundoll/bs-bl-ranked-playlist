@@ -66,8 +66,8 @@ async def main():
         songs = [e for e, i in zip(songs, slct_index) if i]
 
         # read image
-        # with open(f'imgs/s{star:02}.txt', 'r') as f:
-        #    img = f.read()
+        with open(f'imgs/r{star:02}.txt', 'r') as f:
+            img = f.read()
 
         # gen playlist
         fname = f'bl_ranked_star_{star:02}.bplist'
@@ -78,7 +78,7 @@ async def main():
             "playlistTitle": f"bl_ranked_star_{star:02}",
             "playlistAuthor": "",
             "songs": songs,
-            # "image": img
+            "image": img
         }
 
         # save
@@ -132,10 +132,10 @@ async def main():
         songs = [e for e, i in zip(songs, slct_index) if i]
 
         # read image
-        # with open(f'imgs/s{star:02}.txt', 'r') as f:
-        #    img = f.read()
+        with open(f'imgs/p{star:02}.txt', 'r') as f:
+            #  img = f.read()
 
-        # gen playlist
+            # gen playlist
         fname = f'bl_ranked_pass_rate_{star:02}.bplist'
         playlist = {
             "customData": {
@@ -144,7 +144,7 @@ async def main():
             "playlistTitle": f"bl_ranked_pass_rate_{star:02}",
             "playlistAuthor": "",
             "songs": songs,
-            # "image": img
+            "image": img
         }
 
         # save
@@ -198,8 +198,8 @@ async def main():
         songs = [e for e, i in zip(songs, slct_index) if i]
 
         # read image
-        # with open(f'imgs/s{star:02}.txt', 'r') as f:
-        #    img = f.read()
+        with open(f'imgs/a{star:02}.txt', 'r') as f:
+            img = f.read()
 
         # gen playlist
         fname = f'bl_ranked_acc_rate_{star:02}.bplist'
@@ -210,7 +210,7 @@ async def main():
             "playlistTitle": f"bl_ranked_acc_rate_{star:02}",
             "playlistAuthor": "",
             "songs": songs,
-            # "image": img
+            "image": img
         }
 
         # save
@@ -264,8 +264,8 @@ async def main():
         songs = [e for e, i in zip(songs, slct_index) if i]
 
         # read image
-        # with open(f'imgs/s{star:02}.txt', 'r') as f:
-        #    img = f.read()
+        with open(f'imgs/t{star:02}.txt', 'r') as f:
+            img = f.read()
 
         # gen playlist
         fname = f'bl_ranked_tech_rate_{star:02}.bplist'
@@ -276,7 +276,7 @@ async def main():
             "playlistTitle": f"bl_ranked_tech_rate_{star:02}",
             "playlistAuthor": "",
             "songs": songs,
-            # "image": img
+            "image": img
         }
 
         # save
