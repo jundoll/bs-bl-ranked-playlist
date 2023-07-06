@@ -14,3 +14,4 @@
 - プレイリストは毎日 1 回更新します
 - 下画像の赤枠のアイコンを押すことで最新のプレイリストに更新できます (PlaylistManager の mod が必要です)  
   ![Sync](imgs/sync.png)
+- scoresaber版のプレイリストは[こちら](https://github.com/jundoll/bs-ranked-playlist)
