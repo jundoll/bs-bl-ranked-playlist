@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
 
-      - name: Setup Python 3.9
-        uses: actions/setup-python@v4
+      - name: Setup Python 3.10
+        uses: actions/setup-python@main
         with:
-          python-version: 3.9
+          python-version: 3.10
 
       - name: Install dependencies
         run: |
@@ -32,7 +32,7 @@ jobs:
           echo `date +%Y%m%d%H%M%S` > version.txt
 
       - name: Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v3.0.0
+        uses: stefanzweifel/git-auto-commit-action@master
         with:
           commit_message: Auto Commit
 
@@ -52,12 +52,12 @@ jobs:
           done
           assets+=("all_playlists.zip")
           tag_name=`date '+%Y%m%d%H%M'`
-          gh release create "$tag_name" "${assets[@]}" --latest
+          gh release create "$tag_name" "${assets[@]}" --latest -t "latest"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cleanup
-        uses: dev-drprasad/delete-older-releases@v0.2.0
+        uses: dev-drprasad/delete-older-releases@master
         with:
           keep_latest: 1
           delete_tags: true
