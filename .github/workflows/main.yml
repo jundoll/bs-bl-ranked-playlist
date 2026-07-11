@@ -36,11 +36,6 @@ jobs:
           mkdir -p out
           python main.py
 
-      - name: Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@master
-        with:
-          commit_message: Auto Commit
-
       - name: Release
         run: |
           set -x
@@ -55,6 +50,11 @@ jobs:
           gh release create "$tag_name" "${assets[@]}" --latest -t "latest"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@master
+        with:
+          commit_message: Auto Commit
 
       - name: Cleanup
         uses: dev-drprasad/delete-older-releases@master
